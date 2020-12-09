@@ -1,0 +1,125 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://resources/fonts/Gamer.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://resources/script/TextExibition.gd" type="Script" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 28
+outline_size = 2
+outline_color = Color( 0.0235294, 0.00392157, 0.00392157, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 24
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 24
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[node name="UI" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer2" type="CenterContainer" parent="."]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_top = -152.0
+margin_bottom = 89.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="esmaecido" type="ColorRect" parent="CenterContainer2"]
+margin_left = 237.0
+margin_top = 20.0
+margin_right = 787.0
+margin_bottom = 220.0
+rect_min_size = Vector2( 550, 200 )
+color = Color( 0, 0, 0, 0.427451 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -1.49829
+margin_bottom = -1.49829
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+margin_left = 262.0
+margin_top = 105.0
+margin_right = 762.0
+margin_bottom = 494.0
+rect_min_size = Vector2( 500, 200 )
+
+[node name="Separator01" type="HSeparator" parent="CenterContainer/VBoxContainer"]
+margin_right = 500.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 0, 100 )
+
+[node name="Text" type="Label" parent="CenterContainer/VBoxContainer"]
+margin_top = 104.0
+margin_right = 500.0
+margin_bottom = 231.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde sequi consequatur quidem, optio sed, perferendis amet fugit rem illo fuga incidunt voluptatem quaerat! Laudantium culpa ipsum recusandae. Inventore, delectus numquam?"
+autowrap = true
+
+[node name="Separator02" type="HSeparator" parent="CenterContainer/VBoxContainer"]
+margin_top = 235.0
+margin_right = 500.0
+margin_bottom = 335.0
+rect_min_size = Vector2( 0, 100 )
+
+[node name="CenterContainer" type="CenterContainer" parent="CenterContainer/VBoxContainer"]
+margin_top = 339.0
+margin_right = 500.0
+margin_bottom = 389.0
+rect_min_size = Vector2( 200, 0 )
+
+[node name="OptionsBox" type="HBoxContainer" parent="CenterContainer/VBoxContainer/CenterContainer"]
+margin_left = 21.0
+margin_right = 479.0
+margin_bottom = 50.0
+alignment = 2
+
+[node name="Option01" type="Button" parent="CenterContainer/VBoxContainer/CenterContainer/OptionsBox"]
+margin_right = 200.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 200, 50 )
+custom_fonts/font = SubResource( 2 )
+text = "Yes"
+
+[node name="OptionsSeparator" type="VSeparator" parent="CenterContainer/VBoxContainer/CenterContainer/OptionsBox"]
+margin_left = 204.0
+margin_right = 254.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 50, 0 )
+
+[node name="Option02" type="Button" parent="CenterContainer/VBoxContainer/CenterContainer/OptionsBox"]
+margin_left = 258.0
+margin_right = 458.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 200, 50 )
+custom_fonts/font = SubResource( 3 )
+text = "No"
+
+[node name="Tween" type="Tween" parent="."]
+playback_speed = 0.4
+playback/speed = 0.4
+[connection signal="tween_completed" from="Tween" to="." method="_on_Tween_tween_completed"]

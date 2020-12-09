@@ -1,0 +1,505 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://resources/script/Mountains.gd" type="Script" id=1]
+
+[sub_resource type="Animation" id=1]
+resource_name = "Cloud01"
+length = 20.0
+loop = true
+step = 1.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Cloud:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 20 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -180, 70 ), Vector2( 1054.71, 70 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "Cloud02"
+length = 18.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Cloud2:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 18 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -352, 194 ), Vector2( 1180.85, 194 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "Cloud01"
+length = 20.0
+loop = true
+step = 1.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Cloud:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 20 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -180, 70 ), Vector2( 1054.71, 70 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "Cloud02"
+length = 35.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Cloud2:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 35 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -352, 194 ), Vector2( 1180.85, 194 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "Cloud01"
+length = 20.0
+loop = true
+step = 1.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Cloud:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 20 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -180, 70 ), Vector2( 1054.71, 70 ) ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "Cloud02"
+length = 35.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Cloud2:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 35 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -352, 194 ), Vector2( 1180.85, 194 ) ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "Cloud03"
+length = 15.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Cloud3:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 15 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -139, 14 ), Vector2( 1042.73, 14 ) ]
+}
+
+[node name="Mountains" type="CanvasLayer"]
+follow_viewport_enable = true
+script = ExtResource( 1 )
+
+[node name="Sky" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.545098, 0.780392, 0.909804, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SkyFog" type="ColorRect" parent="."]
+anchor_right = 1.0
+margin_bottom = 287.0
+color = Color( 0.117647, 0.12549, 0.478431, 0.0352941 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="subfog01" type="ColorRect" parent="SkyFog"]
+anchor_right = 1.0
+margin_bottom = 261.0
+color = Color( 0.117647, 0.12549, 0.478431, 0.0352941 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="subfog02" type="ColorRect" parent="SkyFog"]
+anchor_right = 1.0
+margin_bottom = 235.0
+color = Color( 0.117647, 0.12549, 0.478431, 0.0352941 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="subfog03" type="ColorRect" parent="SkyFog"]
+anchor_right = 1.0
+margin_bottom = 209.0
+color = Color( 0.117647, 0.12549, 0.478431, 0.0352941 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="subfog04" type="ColorRect" parent="SkyFog"]
+anchor_right = 1.0
+margin_bottom = 185.0
+color = Color( 0.117647, 0.12549, 0.478431, 0.0352941 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="subfog05" type="ColorRect" parent="SkyFog"]
+anchor_right = 1.0
+margin_bottom = 159.0
+color = Color( 0.117647, 0.12549, 0.478431, 0.0352941 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="subfog06" type="ColorRect" parent="SkyFog"]
+anchor_right = 1.0
+margin_bottom = 135.0
+color = Color( 0.117647, 0.12549, 0.478431, 0.0352941 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="subfog07" type="ColorRect" parent="SkyFog"]
+anchor_right = 1.0
+margin_bottom = 111.0
+color = Color( 0.117647, 0.12549, 0.478431, 0.0352941 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="subfog08" type="ColorRect" parent="SkyFog"]
+anchor_right = 1.0
+margin_bottom = 87.0
+color = Color( 0.117647, 0.12549, 0.478431, 0.0352941 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="subfog09" type="ColorRect" parent="SkyFog"]
+anchor_right = 1.0
+margin_bottom = 63.0
+color = Color( 0.117647, 0.12549, 0.478431, 0.0352941 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="subfog10" type="ColorRect" parent="SkyFog"]
+anchor_right = 1.0
+margin_bottom = 39.0
+color = Color( 0.117647, 0.12549, 0.478431, 0.0352941 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="subfog11" type="ColorRect" parent="SkyFog"]
+anchor_right = 1.0
+margin_bottom = 39.0
+color = Color( 0.117647, 0.12549, 0.478431, 0.0352941 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cloud" type="ColorRect" parent="."]
+anchor_left = 1.03073
+anchor_top = 0.188693
+anchor_right = 1.15964
+anchor_bottom = 0.288694
+margin_left = -308.693
+margin_top = -43.2158
+margin_right = -308.693
+margin_bottom = -43.2158
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Cloud2" type="ColorRect" parent="."]
+anchor_left = 1.15317
+anchor_top = 0.324318
+anchor_right = 1.31527
+anchor_bottom = 0.427652
+margin_left = -1509.13
+margin_top = -0.591049
+margin_right = -1509.13
+margin_bottom = 27.409
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Cloud3" type="ColorRect" parent="."]
+anchor_left = 1.01771
+anchor_top = 0.0264796
+anchor_right = 1.13197
+anchor_bottom = 0.104813
+margin_left = -1151.31
+margin_top = -1.88774
+margin_right = -1151.31
+margin_bottom = -1.88774
+color = Color( 1, 1, 1, 0.807843 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="CloudAnimation01" type="AnimationPlayer" parent="."]
+anims/Cloud01 = SubResource( 1 )
+anims/Cloud02 = SubResource( 2 )
+
+[node name="CloudAnimation02" type="AnimationPlayer" parent="."]
+anims/Cloud01 = SubResource( 3 )
+anims/Cloud02 = SubResource( 4 )
+
+[node name="CloudAnimation03" type="AnimationPlayer" parent="."]
+anims/Cloud01 = SubResource( 5 )
+anims/Cloud02 = SubResource( 6 )
+anims/Cloud03 = SubResource( 7 )
+
+[node name="Mountains" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 0.374573
+margin_top = -0.89093
+margin_right = 0.374512
+margin_bottom = -0.89093
+color = Color( 0.545098, 0.780392, 0.909804, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BackMountain01" type="ColorRect" parent="Mountains"]
+anchor_left = 0.173828
+anchor_top = 0.566667
+anchor_right = 0.173828
+anchor_bottom = 0.802369
+margin_right = 100.0
+margin_bottom = -41.4214
+rect_rotation = 45.0
+color = Color( 0.184314, 0.368627, 0.376471, 1 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Shadow" type="ColorRect" parent="Mountains/BackMountain01"]
+anchor_left = 0.01
+anchor_top = 0.330001
+anchor_right = 0.0100015
+anchor_bottom = 1.55422
+margin_right = 99.9998
+margin_bottom = -41.4214
+color = Color( 0.160784, 0.25098, 0.301961, 1 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="FrontMountain01" type="ColorRect" parent="Mountains"]
+anchor_left = 0.0751953
+anchor_top = 0.525
+anchor_right = 0.227113
+anchor_bottom = 1.53145
+margin_right = 381.436
+margin_bottom = -286.869
+rect_rotation = 45.0
+color = Color( 0.14902, 0.568627, 0.262745, 1 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="FrontShadow02" type="ColorRect" parent="Mountains/FrontMountain01"]
+anchor_left = 0.199255
+anchor_right = 1.0
+anchor_bottom = 31.5456
+margin_bottom = -9683.0
+rect_min_size = Vector2( 430, 0 )
+color = Color( 0.156863, 0.419608, 0.32549, 1 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Ice01" type="ColorRect" parent="Mountains/FrontMountain01"]
+anchor_right = 0.100559
+anchor_bottom = 0.167192
+margin_bottom = 3.8147e-06
+color = Color( 0.788235, 0.913725, 0.901961, 1 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Ice02" type="ColorRect" parent="Mountains/FrontMountain01"]
+anchor_right = 0.0540038
+anchor_bottom = 0.211356
+margin_bottom = 3.8147e-06
+color = Color( 0.788235, 0.913725, 0.901961, 1 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Ice03" type="ColorRect" parent="Mountains/FrontMountain01"]
+anchor_left = 0.0037244
+anchor_right = 0.113594
+anchor_bottom = 0.0820187
+margin_bottom = 3.8147e-06
+color = Color( 0.788235, 0.913725, 0.901961, 1 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="BackMountain03" type="ColorRect" parent="Mountains"]
+anchor_left = 0.697266
+anchor_top = 0.506667
+anchor_right = 0.795608
+anchor_bottom = 0.833115
+margin_right = 109.298
+margin_bottom = -127.869
+rect_rotation = 45.0
+color = Color( 0.184314, 0.368627, 0.376471, 1 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Shadow2" type="ColorRect" parent="Mountains/BackMountain03"]
+anchor_top = 0.264706
+anchor_right = 1.0
+anchor_bottom = 0.5
+color = Color( 0.160784, 0.25098, 0.301961, 1 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="BackMountain02" type="ColorRect" parent="Mountains"]
+anchor_left = 0.604492
+anchor_top = 0.428333
+anchor_right = 0.620374
+anchor_bottom = 1.12955
+margin_top = 3.05176e-05
+margin_right = 292.737
+margin_bottom = -47.6827
+rect_rotation = 45.0
+color = Color( 0.184314, 0.368627, 0.376471, 1 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Shadow3" type="ColorRect" parent="Mountains/BackMountain02"]
+anchor_top = 0.211769
+anchor_right = 0.776698
+anchor_bottom = 0.463748
+color = Color( 0.160784, 0.25098, 0.301961, 1 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="FrontMountain02" type="ColorRect" parent="Mountains"]
+anchor_left = 0.396484
+anchor_top = 0.323333
+anchor_right = 0.528376
+anchor_bottom = 1.91966
+margin_right = 501.943
+margin_bottom = -319.797
+rect_rotation = 45.0
+color = Color( 0.14902, 0.568627, 0.262745, 1 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Ice01" type="ColorRect" parent="Mountains/FrontMountain02"]
+anchor_right = 0.208791
+anchor_bottom = 0.214734
+color = Color( 0.788235, 0.913725, 0.901961, 1 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Ice02" type="ColorRect" parent="Mountains/FrontMountain02"]
+anchor_right = 0.370487
+anchor_bottom = 0.122257
+color = Color( 0.788235, 0.913725, 0.901961, 1 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Ice03" type="ColorRect" parent="Mountains/FrontMountain02"]
+anchor_right = 0.10832
+anchor_bottom = 0.250784
+color = Color( 0.788235, 0.913725, 0.901961, 1 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="FrontShadow01" type="ColorRect" parent="Mountains/FrontMountain02"]
+anchor_left = 0.44898
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.156863, 0.419608, 0.32549, 1 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="FrontMountain03" type="ColorRect" parent="Mountains"]
+anchor_left = 0.754896
+anchor_top = 0.326036
+anchor_right = 0.952162
+anchor_bottom = 1.58351
+margin_left = 127.986
+margin_right = 570.986
+margin_bottom = -130.483
+rect_rotation = 45.0
+color = Color( 0.14902, 0.568627, 0.262745, 1 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Ice01" type="ColorRect" parent="Mountains/FrontMountain03"]
+anchor_right = 0.24031
+anchor_bottom = 0.24359
+color = Color( 0.788235, 0.913725, 0.901961, 1 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Ice02" type="ColorRect" parent="Mountains/FrontMountain03"]
+anchor_left = 0.00987775
+anchor_top = -0.000203548
+anchor_right = 0.29825
+anchor_bottom = 0.126399
+color = Color( 0.788235, 0.913725, 0.901961, 1 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Ice03" type="ColorRect" parent="Mountains/FrontMountain03"]
+anchor_right = 0.102326
+anchor_bottom = 0.286859
+color = Color( 0.788235, 0.913725, 0.901961, 1 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
