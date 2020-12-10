@@ -8,7 +8,7 @@ length = 20.0
 loop = true
 step = 1.0
 tracks/0/type = "value"
-tracks/0/path = NodePath("Cloud:rect_position")
+tracks/0/path = NodePath("SkyLayer/Cloud:rect_position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -24,7 +24,7 @@ tracks/0/keys = {
 resource_name = "Cloud02"
 length = 18.0
 tracks/0/type = "value"
-tracks/0/path = NodePath("Cloud2:rect_position")
+tracks/0/path = NodePath("SkyLayer/Cloud2:rect_position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -42,7 +42,7 @@ length = 20.0
 loop = true
 step = 1.0
 tracks/0/type = "value"
-tracks/0/path = NodePath("Cloud:rect_position")
+tracks/0/path = NodePath("SkyLayer/Cloud:rect_position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -59,7 +59,7 @@ resource_name = "Cloud02"
 length = 35.0
 loop = true
 tracks/0/type = "value"
-tracks/0/path = NodePath("Cloud2:rect_position")
+tracks/0/path = NodePath("SkyLayer/Cloud2:rect_position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -77,7 +77,7 @@ length = 20.0
 loop = true
 step = 1.0
 tracks/0/type = "value"
-tracks/0/path = NodePath("Cloud:rect_position")
+tracks/0/path = NodePath("SkyLayer/Cloud:rect_position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -94,7 +94,7 @@ resource_name = "Cloud02"
 length = 35.0
 loop = true
 tracks/0/type = "value"
-tracks/0/path = NodePath("Cloud2:rect_position")
+tracks/0/path = NodePath("SkyLayer/Cloud2:rect_position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -111,7 +111,7 @@ resource_name = "Cloud03"
 length = 15.0
 loop = true
 tracks/0/type = "value"
-tracks/0/path = NodePath("Cloud3:rect_position")
+tracks/0/path = NodePath("SkyLayer/Cloud3:rect_position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -123,11 +123,14 @@ tracks/0/keys = {
 "values": [ Vector2( -139, 14 ), Vector2( 1042.73, 14 ) ]
 }
 
-[node name="Mountains" type="CanvasLayer"]
+[node name="MountainsLandscape" type="CanvasLayer"]
+layer = 2
 follow_viewport_enable = true
 script = ExtResource( 1 )
 
-[node name="Sky" type="ColorRect" parent="."]
+[node name="SkyLayer" type="CanvasLayer" parent="."]
+
+[node name="Sky" type="ColorRect" parent="SkyLayer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 color = Color( 0.545098, 0.780392, 0.909804, 1 )
@@ -135,7 +138,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="SkyFog" type="ColorRect" parent="."]
+[node name="SkyFog" type="ColorRect" parent="SkyLayer"]
 anchor_right = 1.0
 margin_bottom = 287.0
 color = Color( 0.117647, 0.12549, 0.478431, 0.0352941 )
@@ -143,7 +146,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="subfog01" type="ColorRect" parent="SkyFog"]
+[node name="subfog01" type="ColorRect" parent="SkyLayer/SkyFog"]
 anchor_right = 1.0
 margin_bottom = 261.0
 color = Color( 0.117647, 0.12549, 0.478431, 0.0352941 )
@@ -151,7 +154,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="subfog02" type="ColorRect" parent="SkyFog"]
+[node name="subfog02" type="ColorRect" parent="SkyLayer/SkyFog"]
 anchor_right = 1.0
 margin_bottom = 235.0
 color = Color( 0.117647, 0.12549, 0.478431, 0.0352941 )
@@ -159,7 +162,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="subfog03" type="ColorRect" parent="SkyFog"]
+[node name="subfog03" type="ColorRect" parent="SkyLayer/SkyFog"]
 anchor_right = 1.0
 margin_bottom = 209.0
 color = Color( 0.117647, 0.12549, 0.478431, 0.0352941 )
@@ -167,7 +170,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="subfog04" type="ColorRect" parent="SkyFog"]
+[node name="subfog04" type="ColorRect" parent="SkyLayer/SkyFog"]
 anchor_right = 1.0
 margin_bottom = 185.0
 color = Color( 0.117647, 0.12549, 0.478431, 0.0352941 )
@@ -175,7 +178,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="subfog05" type="ColorRect" parent="SkyFog"]
+[node name="subfog05" type="ColorRect" parent="SkyLayer/SkyFog"]
 anchor_right = 1.0
 margin_bottom = 159.0
 color = Color( 0.117647, 0.12549, 0.478431, 0.0352941 )
@@ -183,7 +186,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="subfog06" type="ColorRect" parent="SkyFog"]
+[node name="subfog06" type="ColorRect" parent="SkyLayer/SkyFog"]
 anchor_right = 1.0
 margin_bottom = 135.0
 color = Color( 0.117647, 0.12549, 0.478431, 0.0352941 )
@@ -191,7 +194,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="subfog07" type="ColorRect" parent="SkyFog"]
+[node name="subfog07" type="ColorRect" parent="SkyLayer/SkyFog"]
 anchor_right = 1.0
 margin_bottom = 111.0
 color = Color( 0.117647, 0.12549, 0.478431, 0.0352941 )
@@ -199,7 +202,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="subfog08" type="ColorRect" parent="SkyFog"]
+[node name="subfog08" type="ColorRect" parent="SkyLayer/SkyFog"]
 anchor_right = 1.0
 margin_bottom = 87.0
 color = Color( 0.117647, 0.12549, 0.478431, 0.0352941 )
@@ -207,7 +210,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="subfog09" type="ColorRect" parent="SkyFog"]
+[node name="subfog09" type="ColorRect" parent="SkyLayer/SkyFog"]
 anchor_right = 1.0
 margin_bottom = 63.0
 color = Color( 0.117647, 0.12549, 0.478431, 0.0352941 )
@@ -215,7 +218,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="subfog10" type="ColorRect" parent="SkyFog"]
+[node name="subfog10" type="ColorRect" parent="SkyLayer/SkyFog"]
 anchor_right = 1.0
 margin_bottom = 39.0
 color = Color( 0.117647, 0.12549, 0.478431, 0.0352941 )
@@ -223,7 +226,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="subfog11" type="ColorRect" parent="SkyFog"]
+[node name="subfog11" type="ColorRect" parent="SkyLayer/SkyFog"]
 anchor_right = 1.0
 margin_bottom = 39.0
 color = Color( 0.117647, 0.12549, 0.478431, 0.0352941 )
@@ -231,41 +234,41 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Cloud" type="ColorRect" parent="."]
+[node name="Cloud" type="ColorRect" parent="SkyLayer"]
 anchor_left = 1.03073
 anchor_top = 0.188693
 anchor_right = 1.15964
 anchor_bottom = 0.288694
-margin_left = -308.693
+margin_left = -1235.47
 margin_top = -43.2158
-margin_right = -308.693
+margin_right = -1235.47
 margin_bottom = -43.2158
 __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="Cloud2" type="ColorRect" parent="."]
+[node name="Cloud2" type="ColorRect" parent="SkyLayer"]
 anchor_left = 1.15317
 anchor_top = 0.324318
 anchor_right = 1.31527
 anchor_bottom = 0.427652
-margin_left = -1509.13
-margin_top = -0.591049
-margin_right = -1509.13
-margin_bottom = 27.409
+margin_left = -1532.85
+margin_top = -0.59079
+margin_right = -1532.85
+margin_bottom = 27.4092
 __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="Cloud3" type="ColorRect" parent="."]
+[node name="Cloud3" type="ColorRect" parent="SkyLayer"]
 anchor_left = 1.01771
 anchor_top = 0.0264796
 anchor_right = 1.13197
 anchor_bottom = 0.104813
-margin_left = -1151.31
-margin_top = -1.88774
-margin_right = -1151.31
-margin_bottom = -1.88774
+margin_left = -1181.14
+margin_top = -1.88776
+margin_right = -1181.14
+margin_bottom = -1.88776
 color = Color( 1, 1, 1, 0.807843 )
 __meta__ = {
 "_edit_use_anchors_": true
@@ -284,7 +287,10 @@ anims/Cloud01 = SubResource( 5 )
 anims/Cloud02 = SubResource( 6 )
 anims/Cloud03 = SubResource( 7 )
 
-[node name="Mountains" type="ColorRect" parent="."]
+[node name="MountainLayer" type="CanvasLayer" parent="."]
+layer = 2
+
+[node name="Mountains" type="ColorRect" parent="MountainLayer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 0.374573
@@ -296,7 +302,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="BackMountain01" type="ColorRect" parent="Mountains"]
+[node name="BackMountain01" type="ColorRect" parent="MountainLayer/Mountains"]
 anchor_left = 0.173828
 anchor_top = 0.566667
 anchor_right = 0.389648
@@ -309,7 +315,7 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="Shadow" type="ColorRect" parent="Mountains/BackMountain01"]
+[node name="Shadow" type="ColorRect" parent="MountainLayer/Mountains/BackMountain01"]
 anchor_top = 0.11747
 anchor_right = 1.11526
 anchor_bottom = 1.43072
@@ -319,7 +325,7 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="FrontMountain01" type="ColorRect" parent="Mountains"]
+[node name="FrontMountain01" type="ColorRect" parent="MountainLayer/Mountains"]
 anchor_left = 0.0751953
 anchor_top = 0.525
 anchor_right = 0.227113
@@ -332,7 +338,7 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="FrontShadow02" type="ColorRect" parent="Mountains/FrontMountain01"]
+[node name="FrontShadow02" type="ColorRect" parent="MountainLayer/Mountains/FrontMountain01"]
 anchor_left = 0.199255
 anchor_right = 1.0
 anchor_bottom = 20.3194
@@ -343,7 +349,7 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="Ice01" type="ColorRect" parent="Mountains/FrontMountain01"]
+[node name="Ice01" type="ColorRect" parent="MountainLayer/Mountains/FrontMountain01"]
 anchor_right = 0.100559
 anchor_bottom = 0.167192
 margin_bottom = 3.8147e-06
@@ -352,7 +358,7 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="Ice02" type="ColorRect" parent="Mountains/FrontMountain01"]
+[node name="Ice02" type="ColorRect" parent="MountainLayer/Mountains/FrontMountain01"]
 anchor_right = 0.0540038
 anchor_bottom = 0.211356
 margin_bottom = 3.8147e-06
@@ -361,7 +367,7 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="Ice03" type="ColorRect" parent="Mountains/FrontMountain01"]
+[node name="Ice03" type="ColorRect" parent="MountainLayer/Mountains/FrontMountain01"]
 anchor_left = 0.0037244
 anchor_right = 0.113594
 anchor_bottom = 0.0820187
@@ -371,7 +377,7 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="BackMountain03" type="ColorRect" parent="Mountains"]
+[node name="BackMountain03" type="ColorRect" parent="MountainLayer/Mountains"]
 anchor_left = 0.697266
 anchor_top = 0.506667
 anchor_right = 1.02705
@@ -384,7 +390,7 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="Shadow2" type="ColorRect" parent="Mountains/BackMountain03"]
+[node name="Shadow2" type="ColorRect" parent="MountainLayer/Mountains/BackMountain03"]
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -394,7 +400,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="BackMountain02" type="ColorRect" parent="Mountains"]
+[node name="BackMountain02" type="ColorRect" parent="MountainLayer/Mountains"]
 anchor_left = 0.604492
 anchor_top = 0.428333
 anchor_right = 1.04225
@@ -408,7 +414,7 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="Shadow3" type="ColorRect" parent="Mountains/BackMountain02"]
+[node name="Shadow3" type="ColorRect" parent="MountainLayer/Mountains/BackMountain02"]
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -419,7 +425,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="FrontMountain02" type="ColorRect" parent="Mountains"]
+[node name="FrontMountain02" type="ColorRect" parent="MountainLayer/Mountains"]
 anchor_left = 0.396484
 anchor_top = 0.323333
 anchor_right = 0.528376
@@ -432,7 +438,7 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="Ice01" type="ColorRect" parent="Mountains/FrontMountain02"]
+[node name="Ice01" type="ColorRect" parent="MountainLayer/Mountains/FrontMountain02"]
 anchor_right = 0.208791
 anchor_bottom = 0.214734
 color = Color( 0.788235, 0.913725, 0.901961, 1 )
@@ -440,7 +446,7 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="Ice02" type="ColorRect" parent="Mountains/FrontMountain02"]
+[node name="Ice02" type="ColorRect" parent="MountainLayer/Mountains/FrontMountain02"]
 anchor_right = 0.370487
 anchor_bottom = 0.122257
 color = Color( 0.788235, 0.913725, 0.901961, 1 )
@@ -448,7 +454,7 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="Ice03" type="ColorRect" parent="Mountains/FrontMountain02"]
+[node name="Ice03" type="ColorRect" parent="MountainLayer/Mountains/FrontMountain02"]
 anchor_right = 0.10832
 anchor_bottom = 0.250784
 color = Color( 0.788235, 0.913725, 0.901961, 1 )
@@ -456,7 +462,7 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="FrontShadow01" type="ColorRect" parent="Mountains/FrontMountain02"]
+[node name="FrontShadow01" type="ColorRect" parent="MountainLayer/Mountains/FrontMountain02"]
 anchor_left = 0.44898
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -465,7 +471,7 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="FrontMountain03" type="ColorRect" parent="Mountains"]
+[node name="FrontMountain03" type="ColorRect" parent="MountainLayer/Mountains"]
 anchor_left = 0.754897
 anchor_top = 0.326667
 anchor_right = 1.33595
@@ -479,7 +485,7 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="Ice01" type="ColorRect" parent="Mountains/FrontMountain03"]
+[node name="Ice01" type="ColorRect" parent="MountainLayer/Mountains/FrontMountain03"]
 anchor_right = 0.24031
 anchor_bottom = 0.24359
 color = Color( 0.788235, 0.913725, 0.901961, 1 )
@@ -487,7 +493,7 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="Ice02" type="ColorRect" parent="Mountains/FrontMountain03"]
+[node name="Ice02" type="ColorRect" parent="MountainLayer/Mountains/FrontMountain03"]
 anchor_left = 0.00987775
 anchor_top = -0.000203548
 anchor_right = 0.29825
@@ -497,7 +503,7 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="Ice03" type="ColorRect" parent="Mountains/FrontMountain03"]
+[node name="Ice03" type="ColorRect" parent="MountainLayer/Mountains/FrontMountain03"]
 anchor_right = 0.102326
 anchor_bottom = 0.286859
 color = Color( 0.788235, 0.913725, 0.901961, 1 )

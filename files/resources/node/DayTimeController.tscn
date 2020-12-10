@@ -1,0 +1,993 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://resources/script/DayTimeController.gd" type="Script" id=1]
+
+[sub_resource type="Animation" id=1]
+resource_name = "Anoitecer"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Night/DarkBlue:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0.0235294, 0, 0.156863, 0 ), Color( 0.0235294, 0, 0.156863, 0.588235 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Night/Black:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0.0745098, 0.0745098, 0.133333, 0 ), Color( 0.0745098, 0.0745098, 0.133333, 0.392157 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "Amanhecer"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Night/DarkBlue:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0.0235294, 0, 0.156863, 0.72549 ), Color( 0.0235294, 0, 0.156863, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Night/Black:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0.0745098, 0.0745098, 0.133333, 0.470588 ), Color( 0.0745098, 0.0745098, 0.133333, 0 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "AnoitecerStars"
+length = 5.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Night/Stars/StarsLayer/Star01:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0.913725 ), Color( 1, 1, 1, 0.337255 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Night/Stars/StarsLayer/Star05:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0.94902 ), Color( 1, 1, 1, 0.282353 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Night/Stars/StarsLayer/Star16:color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.278431 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Night/Stars/StarsLayer/Star17:color")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 3.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0.960784 ), Color( 1, 1, 1, 0.180392 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Night/Stars/StarsLayer/Star18:color")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 1.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0.843137 ), Color( 1, 1, 1, 0.513726 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Night/Stars/StarsLayer/Star19:color")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 3.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.109804 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Night/Stars/StarsLayer/Star20:color")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 2.7 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0.537255 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Night/Stars/StarsLayer/Star21:color")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 1.7 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0.87451 ), Color( 1, 1, 1, 0.109804 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Night/Stars/StarsLayer/Star22:color")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 3.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0.184314 ), Color( 1, 1, 1, 0.988235 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Night/Stars/StarsLayer/Star23:color")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0, 1.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0.87451 ), Color( 1, 1, 1, 0.14902 ) ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Night/Stars/StarsLayer/Star24:color")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0, 2.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.0862745 ) ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("Night/Stars/StarsLayer/Star25:color")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0, 3.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0.533333 ), Color( 1, 1, 1, 0.0352941 ) ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("Night/Stars/StarsLayer/Star26:color")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0, 1.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0.611765 ), Color( 1, 1, 1, 0.0823529 ) ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("Night/Stars/StarsLayer/Star03:color")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0, 3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.0392157 ) ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("Night/Stars/StarsLayer/Star04:color")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0, 2.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0.52549 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("Night/Stars/StarsLayer/Star06:color")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 0, 3.7 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0.490196 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("Night/Stars/StarsLayer/Star07:color")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = {
+"times": PoolRealArray( 0, 2.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.0705882 ) ]
+}
+tracks/17/type = "value"
+tracks/17/path = NodePath("Night/Stars/StarsLayer/Star08:color")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/keys = {
+"times": PoolRealArray( 0, 3.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0.47451 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/18/type = "value"
+tracks/18/path = NodePath("Night/Stars/StarsLayer/Star09:color")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/keys = {
+"times": PoolRealArray( 0, 1.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0.478431 ), Color( 1, 1, 1, 0.92549 ) ]
+}
+tracks/19/type = "value"
+tracks/19/path = NodePath("Night/Stars/StarsLayer/Star10:color")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/keys = {
+"times": PoolRealArray( 0, 3.9 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.105882 ) ]
+}
+tracks/20/type = "value"
+tracks/20/path = NodePath("Night/Stars/StarsLayer/Star11:color")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/keys = {
+"times": PoolRealArray( 0, 2.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0.584314 ), Color( 1, 1, 1, 0.0980392 ) ]
+}
+tracks/21/type = "value"
+tracks/21/path = NodePath("Night/Stars/StarsLayer/Star12:color")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/keys = {
+"times": PoolRealArray( 0, 3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0.596078 ), Color( 1, 1, 1, 0.133333 ) ]
+}
+tracks/22/type = "value"
+tracks/22/path = NodePath("Night/Stars/StarsLayer/Star13:color")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/keys = {
+"times": PoolRealArray( 0, 2.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.109804 ) ]
+}
+tracks/23/type = "value"
+tracks/23/path = NodePath("Night/Stars/StarsLayer/Star02:color")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/keys = {
+"times": PoolRealArray( 0, 2.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0.952941 ), Color( 1, 1, 1, 0.231373 ) ]
+}
+tracks/24/type = "value"
+tracks/24/path = NodePath("Night/Stars/StarsLayer/Star14:color")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/keys = {
+"times": PoolRealArray( 0, 3.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0.521569 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/25/type = "value"
+tracks/25/path = NodePath("Night/Stars/StarsLayer/Star15:color")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/keys = {
+"times": PoolRealArray( 0, 1.8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.435294 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "StarsVisibility"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Night/Stars/StarsLayer/Star01:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0.913725 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Night/Stars/StarsLayer/Star05:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0.94902 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Night/Stars/StarsLayer/Star16:color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Night/Stars/StarsLayer/Star17:color")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0.960784 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Night/Stars/StarsLayer/Star18:color")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0.843137 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Night/Stars/StarsLayer/Star19:color")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Night/Stars/StarsLayer/Star20:color")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0.537255 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Night/Stars/StarsLayer/Star21:color")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0.87451 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Night/Stars/StarsLayer/Star22:color")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0.184314 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Night/Stars/StarsLayer/Star23:color")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0.87451 ) ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Night/Stars/StarsLayer/Star24:color")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("Night/Stars/StarsLayer/Star25:color")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0.533333 ) ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("Night/Stars/StarsLayer/Star26:color")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0.611765 ) ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("Night/Stars/StarsLayer/Star03:color")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("Night/Stars/StarsLayer/Star04:color")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0.52549 ) ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("Night/Stars/StarsLayer/Star06:color")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 0, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0.490196 ) ]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("Night/Stars/StarsLayer/Star07:color")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = {
+"times": PoolRealArray( 0, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/17/type = "value"
+tracks/17/path = NodePath("Night/Stars/StarsLayer/Star08:color")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/keys = {
+"times": PoolRealArray( 0, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0.47451 ) ]
+}
+tracks/18/type = "value"
+tracks/18/path = NodePath("Night/Stars/StarsLayer/Star09:color")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/keys = {
+"times": PoolRealArray( 0, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0.478431 ) ]
+}
+tracks/19/type = "value"
+tracks/19/path = NodePath("Night/Stars/StarsLayer/Star10:color")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/keys = {
+"times": PoolRealArray( 0, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/20/type = "value"
+tracks/20/path = NodePath("Night/Stars/StarsLayer/Star11:color")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/keys = {
+"times": PoolRealArray( 0, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0.584314 ) ]
+}
+tracks/21/type = "value"
+tracks/21/path = NodePath("Night/Stars/StarsLayer/Star12:color")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/keys = {
+"times": PoolRealArray( 0, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0.596078 ) ]
+}
+tracks/22/type = "value"
+tracks/22/path = NodePath("Night/Stars/StarsLayer/Star13:color")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/keys = {
+"times": PoolRealArray( 0, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/23/type = "value"
+tracks/23/path = NodePath("Night/Stars/StarsLayer/Star02:color")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/keys = {
+"times": PoolRealArray( 0, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0.952941 ) ]
+}
+tracks/24/type = "value"
+tracks/24/path = NodePath("Night/Stars/StarsLayer/Star14:color")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/keys = {
+"times": PoolRealArray( 0, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0.521569 ) ]
+}
+tracks/25/type = "value"
+tracks/25/path = NodePath("Night/Stars/StarsLayer/Star15:color")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/keys = {
+"times": PoolRealArray( 0, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[node name="DayLightCicle" type="Node"]
+script = ExtResource( 1 )
+
+[node name="Night" type="CanvasLayer" parent="."]
+layer = 5
+
+[node name="DarkBlue" type="ColorRect" parent="Night"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.0235294, 0, 0.156863, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Black" type="ColorRect" parent="Night"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.0745098, 0.0745098, 0.133333, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Stars" type="CenterContainer" parent="Night"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="StarsLayer" type="CanvasLayer" parent="Night/Stars"]
+
+[node name="Star01" type="ColorRect" parent="Night/Stars/StarsLayer"]
+margin_left = 21.4299
+margin_top = 26.0646
+margin_right = 26.4299
+margin_bottom = 31.0646
+color = Color( 1, 1, 1, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Star05" type="ColorRect" parent="Night/Stars/StarsLayer"]
+margin_left = 200.43
+margin_top = 172.065
+margin_right = 205.43
+margin_bottom = 177.065
+color = Color( 1, 1, 1, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Star16" type="ColorRect" parent="Night/Stars/StarsLayer"]
+margin_left = 522.676
+margin_top = 255.124
+margin_right = 530.676
+margin_bottom = 262.124
+color = Color( 1, 1, 1, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Star17" type="ColorRect" parent="Night/Stars/StarsLayer"]
+margin_left = 123.676
+margin_top = 364.124
+margin_right = 131.676
+margin_bottom = 371.124
+color = Color( 1, 1, 1, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Star18" type="ColorRect" parent="Night/Stars/StarsLayer"]
+margin_left = 235.676
+margin_top = 524.124
+margin_right = 243.676
+margin_bottom = 531.124
+color = Color( 1, 1, 1, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Star19" type="ColorRect" parent="Night/Stars/StarsLayer"]
+margin_left = 463.676
+margin_top = 381.124
+margin_right = 471.676
+margin_bottom = 388.124
+color = Color( 1, 1, 1, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Star20" type="ColorRect" parent="Night/Stars/StarsLayer"]
+margin_left = 610.676
+margin_top = 495.124
+margin_right = 618.676
+margin_bottom = 502.124
+color = Color( 1, 1, 1, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Star21" type="ColorRect" parent="Night/Stars/StarsLayer"]
+margin_left = 885.676
+margin_top = 437.124
+margin_right = 893.676
+margin_bottom = 444.124
+color = Color( 1, 1, 1, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Star22" type="ColorRect" parent="Night/Stars/StarsLayer"]
+margin_left = 782.676
+margin_top = 341.124
+margin_right = 790.676
+margin_bottom = 348.124
+color = Color( 1, 1, 1, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Star23" type="ColorRect" parent="Night/Stars/StarsLayer"]
+margin_left = 862.676
+margin_top = 182.124
+margin_right = 870.676
+margin_bottom = 189.124
+color = Color( 1, 1, 1, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Star24" type="ColorRect" parent="Night/Stars/StarsLayer"]
+margin_left = 675.676
+margin_top = 146.124
+margin_right = 683.676
+margin_bottom = 153.124
+color = Color( 1, 1, 1, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Star25" type="ColorRect" parent="Night/Stars/StarsLayer"]
+margin_left = 950.676
+margin_top = 39.1239
+margin_right = 958.676
+margin_bottom = 46.1239
+color = Color( 1, 1, 1, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Star26" type="ColorRect" parent="Night/Stars/StarsLayer"]
+margin_left = 395.676
+margin_top = 68.1239
+margin_right = 403.676
+margin_bottom = 75.1239
+color = Color( 1, 1, 1, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Star03" type="ColorRect" parent="Night/Stars/StarsLayer"]
+margin_left = 278.0
+margin_top = 44.0
+margin_right = 292.0
+margin_bottom = 56.0
+color = Color( 1, 1, 1, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Star04" type="ColorRect" parent="Night/Stars/StarsLayer"]
+margin_left = 57.7514
+margin_top = 230.878
+margin_right = 71.7514
+margin_bottom = 242.878
+color = Color( 1, 1, 1, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Star06" type="ColorRect" parent="Night/Stars/StarsLayer"]
+margin_left = 439.516
+margin_top = 165.47
+margin_right = 453.516
+margin_bottom = 177.47
+color = Color( 1, 1, 1, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Star07" type="ColorRect" parent="Night/Stars/StarsLayer"]
+margin_left = 300.692
+margin_top = 330.991
+margin_right = 314.692
+margin_bottom = 342.991
+color = Color( 1, 1, 1, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Star08" type="ColorRect" parent="Night/Stars/StarsLayer"]
+margin_left = 634.402
+margin_top = 293.615
+margin_right = 648.402
+margin_bottom = 305.615
+color = Color( 1, 1, 1, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Star09" type="ColorRect" parent="Night/Stars/StarsLayer"]
+margin_left = 823.949
+margin_top = 60.018
+margin_right = 837.949
+margin_bottom = 72.018
+color = Color( 1, 1, 1, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Star10" type="ColorRect" parent="Night/Stars/StarsLayer"]
+margin_left = 568.995
+margin_top = 46.6696
+margin_right = 582.995
+margin_bottom = 58.6696
+color = Color( 1, 1, 1, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Star11" type="ColorRect" parent="Night/Stars/StarsLayer"]
+margin_left = 910.714
+margin_top = 313.638
+margin_right = 924.714
+margin_bottom = 325.638
+color = Color( 1, 1, 1, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Star12" type="ColorRect" parent="Night/Stars/StarsLayer"]
+margin_left = 72.5537
+margin_top = 462.77
+margin_right = 86.5537
+margin_bottom = 474.77
+color = Color( 1, 1, 1, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Star13" type="ColorRect" parent="Night/Stars/StarsLayer"]
+margin_left = 463.764
+margin_top = 530.959
+margin_right = 477.764
+margin_bottom = 542.959
+color = Color( 1, 1, 1, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Star02" type="ColorRect" parent="Night/Stars/StarsLayer"]
+margin_left = 124.992
+margin_top = 74.535
+margin_right = 129.992
+margin_bottom = 79.535
+color = Color( 1, 1, 1, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Star14" type="ColorRect" parent="Night/Stars/StarsLayer"]
+margin_left = 931.926
+margin_top = 540.398
+margin_right = 945.926
+margin_bottom = 552.398
+color = Color( 1, 1, 1, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Star15" type="ColorRect" parent="Night/Stars/StarsLayer"]
+margin_left = 741.263
+margin_top = 430.908
+margin_right = 755.263
+margin_bottom = 442.908
+color = Color( 1, 1, 1, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Anoitecer" type="AnimationPlayer" parent="."]
+anims/Anoitecer = SubResource( 1 )
+
+[node name="Amanhecer" type="AnimationPlayer" parent="."]
+anims/Amanhecer = SubResource( 2 )
+
+[node name="ShiningStars" type="AnimationPlayer" parent="."]
+anims/AnoitecerStars = SubResource( 3 )
+anims/StarsVisibility = SubResource( 4 )
+[connection signal="animation_finished" from="Anoitecer" to="." method="_on_Anoitecer_animation_finished"]
+[connection signal="animation_finished" from="Amanhecer" to="." method="_on_Amanhecer_animation_finished"]
+[connection signal="animation_finished" from="ShiningStars" to="." method="_on_ShiningStars_animation_finished"]
