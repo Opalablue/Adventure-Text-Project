@@ -3,6 +3,10 @@
  Days without connection: 1 month and couting.
 
  You are not allowed to repost or use any content from this repository for commercial purposes. But you are free to study, learn, use on your non-commercial projects (with credits) and suggest alterations. 
+ 
+# OBJECTIVES
+
+Kill my boredom and understand how I can improve my game performance by coding the graphics.
 
 # UPDATE LIST
 
